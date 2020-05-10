@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1757</width>
+    <height>998</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="20,60,0">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="pics.qrc">:/res/pics/pics/porky.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="btnShirts">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTipDuration">
+           <number>7</number>
+          </property>
+          <property name="text">
+           <string>Shirts</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSweatShirts">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Sweat Shirts</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnCaps">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Caps</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnCups">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Cups</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnStickers">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Stickers</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_13">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Misc</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Texas A&amp;I Store</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>Products:</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout" rowstretch="0,33,33,5">
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButton_11">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Next Page</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="pushButton_12">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Previous Page</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="ItemCard" name="widget" native="true"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="ItemCard" name="widget_2" native="true"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="ItemCard" name="widget_3" native="true"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="ItemCard" name="widget_4" native="true"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="ItemCard" name="widget_5" native="true"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="ItemCard" name="widget_6" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_7" stretch="80">
+     <item>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="title">
+        <string>Cart:</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8" stretch="80,5,15">
+        <item>
+         <widget class="QListView" name="listView"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="10,90">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Total:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>$0.00</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Checkout</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ItemCard</class>
+   <extends>QWidget</extends>
+   <header>ItemCard.h</header>
+   <container>1</container>
+   <slots>
+    <signal>signal1()</signal>
+    <slot>setItemName()</slot>
+    <slot>setAvailable()</slot>
+    <slot>setShirts()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="pics.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnShirts</sender>
+   <signal>clicked()</signal>
+   <receiver>widget_6</receiver>
+   <slot>setShirts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>344</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>425</x>
+     <y>325</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnShirts</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>setShirts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>259</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>834</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnShirts</sender>
+   <signal>clicked()</signal>
+   <receiver>widget_2</receiver>
+   <slot>setShirts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>229</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1146</x>
+     <y>282</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnShirts</sender>
+   <signal>clicked()</signal>
+   <receiver>widget_3</receiver>
+   <slot>setShirts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>297</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>643</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnShirts</sender>
+   <signal>clicked()</signal>
+   <receiver>widget_4</receiver>
+   <slot>setShirts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>312</x>
+     <y>360</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>840</x>
+     <y>640</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnShirts</sender>
+   <signal>clicked()</signal>
+   <receiver>widget_5</receiver>
+   <slot>setShirts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1108</x>
+     <y>603</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

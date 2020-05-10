@@ -1,0 +1,10 @@
+debug/DBAPI.o
+debug/InventoryAttributes.o
+debug/InventoryItems.o
+debug/ItemCard.o
+debug/Product.o
+debug/main.o
+debug/Widget.o
+debug/qrc_pics.o
+debug/moc_ItemCard.o
+debug/moc_Widget.o

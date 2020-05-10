@@ -1,0 +1,10 @@
+release/DBAPI.o
+release/InventoryAttributes.o
+release/InventoryItems.o
+release/ItemCard.o
+release/Product.o
+release/main.o
+release/Widget.o
+release/qrc_pics.o
+release/moc_ItemCard.o
+release/moc_Widget.o

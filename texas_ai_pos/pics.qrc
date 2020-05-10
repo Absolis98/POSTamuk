@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/res/pics">
+        <file>pics/picture.jpg</file>
+        <file>pics/porky.png</file>
+        <file>pics/A&amp;I Logo shirt.jpg</file>
+        <file>pics/alumni shirt.jpg</file>
+        <file>pics/porky shirt.jpg</file>
+    </qresource>
+</RCC>
