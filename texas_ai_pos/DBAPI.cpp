@@ -5,7 +5,7 @@
 using namespace std;
 
 
-DBAPI::DBAPI(string db_name, string user, string pass)
+DBAPI::DBAPI(QString db_name, QString user, QString pass)
 {
 	this->db_name = db_name;
 	this->user = user;
@@ -19,16 +19,57 @@ void DBAPI::connectDB()
 
 
 
-	try {
+    if(db.open())
+    {
+        qDebug() << "Opened";
 
-		con.Connect(db_name.c_str(), user.c_str(), pass.c_str(), SA_SQLServer_Client);
-		cout << "connected!" << endl << endl;
+        //qDebug() << "Opened";
 
-	}
-	catch (SAException& x) {
-		con.Rollback();
-		cout << (const char*)x.ErrText();
-	}
+        //getActiveItems();
+
+
+        if(qry.exec("SELECT name, category, active, attribute, quantity, price FROM Product WHERE quantity > 0 and category = 'shirt';"))
+          {
+              while(qry.next())
+              {
+                  //QString  bass = qry.value(1).toString();
+                  //ui->labelItemName1->setText(bass);
+                  names << qry.value(0).toString();
+                  qDebug() << names;
+                  prices << qry.value(5).toInt();
+                  qDebug() << prices;
+                  available << qry.value(4).toInt();
+                  qDebug() << available;
+                  //names << qry.value(3).toString();
+                  //qDebug() << sizes;
+
+
+
+
+                  //qDebug() << qry.value(0).toString();
+                  //qDebug() << "Closing...";
+                  //db.close();
+
+
+              }
+              //namesC << (names);
+              //pricesC << (prices);
+              //availableC << (available);
+              //sizesC << (sizes);
+
+
+          }else{
+              qDebug() << "Error = " << db.lastError().text();
+
+          }
+
+
+
+        //qDebug() << "Closing...";
+        //db.close();
+    }else{
+        qDebug() << "Error = " << db.lastError().text();
+    }
 
 
 }
@@ -63,16 +104,16 @@ vector<InventoryItems> DBAPI::getActiveItems()
 
 
 			int id;
-			string name;
-			string category;
-			string description;
-			string imageID;
+            QString name;
+            QString category;
+            QString description;
+            QString imageID;
 
 			id = (sa_int64_t)cmd.Field(1).asNumeric();
-			name = (const char*)cmd.Field(2).asString();
-			category = (const char*)cmd.Field(3).asString();
-			description = (const char*)cmd.Field(4).asString();
-			imageID = (const char*)cmd.Field(5).asString();
+            name = (const char*)cmd.Field(2).asQString();
+            category = (const char*)cmd.Field(3).asQString();
+            description = (const char*)cmd.Field(4).asQString();
+            imageID = (const char*)cmd.Field(5).asQString();
 
 			itemsVector[numItems - 1].setID(id);
 			itemsVector[numItems - 1].setName(name);
@@ -134,13 +175,13 @@ vector<InventoryAttributes> DBAPI::getAllDBAtts()
 
 			int attID;
 			int itemID;
-			string attribute;
+            QString attribute;
 			int quantity;
 			double price;
 
 			attID = (sa_int64_t)cmd.Field(1).asNumeric();
 			itemID = (sa_int64_t)cmd.Field(2).asNumeric();
-			attribute = (const char*)cmd.Field(3).asString();
+            attribute = (const char*)cmd.Field(3).asQString();
 			quantity = (sa_int64_t)cmd.Field(4).asNumeric();
 			price = (double)cmd.Field(5).asNumeric();
 
@@ -171,7 +212,7 @@ vector<InventoryAttributes> DBAPI::getAllDBAtts()
 }
 
 
-/*string DBAPI::getItemName(int id)
+/*QString DBAPI::getItemName(int id)
 {
 	return "name";
 }*/
@@ -265,8 +306,8 @@ void DBAPI::getCustomers()
 
 			while (cmd.FetchNext())
 			{
-				cout << (const char*)cmd.Field("first").asString() << " " <<
-					(const char*)cmd.Field("last").asString() << endl;
+                cout << (const char*)cmd.Field("first").asQString() << " " <<
+                    (const char*)cmd.Field("last").asQString() << endl;
 			}
 
 		}

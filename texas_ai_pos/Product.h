@@ -2,8 +2,8 @@
 #define PRODUCT_H
 
 #include <QString>
-//#include "InventoryItems.h"
-//#include "InventoryAttributes.h"
+#include "InventoryItems.h"
+#include "InventoryAttributes.h"
 #include <QVector>
 #include <QSqlQuery>
 //#include "Widget.h"
@@ -11,38 +11,36 @@
 class Product
 {
 public:
-    //Product(InventoryItems, InventoryAttributes);
-    Product(QString n, double p, Map<QString, int>
+    Product();
+    Product(InventoryItems, InventoryAttributes);
+    ~Product();
 
 
+    InventoryItems thisItem;
+    InventoryAttributes thisAtt;
 
-    int itemID;
-    int attID;
-    QString name;
-    QString category;
-    QString size;
-    int quantityAv;
-    double price;
+    static QVector<Product> cart;
+    static QVector<InventoryItems> itemsVector;
+    static QVector<InventoryAttributes> attsVector;
+    static QVector<Product> DBProducts;
+    static double total;
+    int selected = 0;
 
-    //InventoryItems thisItem;
-    //InventoryAttributes thisAtt;
+    QVector<InventoryItems> getActiveItems(); //returns a vector containing all active item objects
 
-    //static QVector<Product> cart;
-    //static QVector<InventoryItems> itemsVector;
-    //static QVector<InventoryAttributes> attsVector;
-    //static QVector<Product> DBProducts;
 
-    //QVector<InventoryItems> getActiveItems(); //returns a vector containing all active item objects
+    static void clearCart();
+    void remFromCart();
+    //static void printCart();
+    static double getTotal();
+    int getSelected();
 
-    void setItemID();
-    void setAttID();
-    void setName();
-    void setCategory();
-    void setSize();
-    void setQuantityAv();
-    void setPrice();
+    void incBtn();
+    void decBtn();
+    void addToCartBtn();
 
-    static QVector<Product> makeProducts(QVector<InventoryItems> &II, QVector<InventoryAttributes> &&IA);
+    static QVector<Product> makeProducts(QVector<InventoryItems> & II, QVector<InventoryAttributes> & IA);
+    static void printDBProducts();
 
 
 

@@ -68,7 +68,7 @@ public:
     static QVector<int> available;
     static QVector<QString> sizes;
 
-    static QVector<Product> products;
+    //static QVector<Product> products;
 
     //static QVector<QString> namesC;
     //static QVector<double> pricesC;

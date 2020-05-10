@@ -5,7 +5,7 @@ QVector<QString> Widget::names;
 QVector<double> Widget::prices;
 QVector<int> Widget::available;
 QVector<QString> Widget::sizes;
-QVector<Product> Widget::products;
+//QVector<Product> Widget::products;
 
 Widget::Widget(QWidget *parent)
 :QWidget(parent), ui(new Ui::Widget)

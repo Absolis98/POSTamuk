@@ -1,8 +1,8 @@
-release/DBAPI.o
 release/InventoryAttributes.o
 release/InventoryItems.o
 release/ItemCard.o
 release/Product.o
+release/Register.o
 release/main.o
 release/Widget.o
 release/qrc_pics.o

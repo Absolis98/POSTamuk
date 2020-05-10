@@ -20,7 +20,7 @@ void Register::transactionPrompt()
 	double change;
 
 	cout << "These are the items in your cart: " << endl;
-	Product::printCart();
+    //Product::printCart();
 	cout << "Your total comes out to $" << total << endl;
 	cout << "Please input cash given" << endl;
 	cin >> cashGiven;

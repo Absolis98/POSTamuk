@@ -16,10 +16,17 @@ class DBAPI
 {
 
 private:
-	string db_name;
-	string user;
-	string pass;
-    //SAConnection con;
+    QString servername = "LOCALHOST\\SQLEXPRESS";
+    QString dbname = "master";
+    QString user = "ADMIN";
+    QString password = "beepboop";
+    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+    QString dsn = QString ("DRIVER={SQL Server};SERVER=%1;DATABASE=%2;UID=%3;PWD=%4;").arg(servername).arg(dbname).arg(user).arg(password);
+
+    QSqlQuery qry;
+
+
+
 
 public:
 	
@@ -28,7 +35,7 @@ public:
 	//------------------------------------------------------------
 	//CLASS FUNCTIONS
 	//------------------------------------------------------------
-	DBAPI(string db_name, string user, string pass);
+    DBAPI(QString db_name, QString user, QString pass);
 	void connectDB();
 
 
@@ -38,7 +45,7 @@ public:
 	void createCustomer();
 	void deleteCustomer();
 	void editCustomer(int id);
-	void editCustomer(string first, string last);
+    void editCustomer(QString first, QString last);
 
 	void getCustomers();
 

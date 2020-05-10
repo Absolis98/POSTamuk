@@ -16,22 +16,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    DBAPI.cpp \
     InventoryAttributes.cpp \
     InventoryItems.cpp \
     ItemCard.cpp \
     Product.cpp \
-    Register.cpp \
     main.cpp \
     Widget.cpp
 
 HEADERS += \
-    DBAPI.h \
     InventoryAttributes.h \
     InventoryItems.h \
     ItemCard.h \
     Product.h \
-    Register.h \
     Widget.h
 
 FORMS += \

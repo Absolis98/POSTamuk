@@ -1,8 +1,8 @@
-debug/DBAPI.o
 debug/InventoryAttributes.o
 debug/InventoryItems.o
 debug/ItemCard.o
 debug/Product.o
+debug/Register.o
 debug/main.o
 debug/Widget.o
 debug/qrc_pics.o
