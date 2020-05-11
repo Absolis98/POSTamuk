@@ -1,10 +1,9 @@
 #include "ItemCard.h"
 #include "ui_ItemCard.h"
 
-//QVector<QString> ItemCard::names;
-//QVector<double> ItemCard::prices;
+
 int ItemCard::index;
-//QVector<QString> ItemCard::sizes;
+
 
 ItemCard::ItemCard(QWidget *parent)
 :QWidget(parent), ui(new Ui::ItemCard)
@@ -55,7 +54,6 @@ void ItemCard::setShirts()
                 ui->lblImage->setPixmap(alumn.scaled(w,h,Qt::KeepAspectRatio));
         }
 
-        //qDebug() << wop;
 
         ui->boxSize->addItem(Product::DBProducts[index].thisAtt.getAttribute());
 
@@ -68,13 +66,7 @@ void ItemCard::setShirts()
         }while(Product::DBProducts[index].thisItem.getID() == Product::DBProducts[index+1].thisItem.getID());
 
 
-        //Product::shirts.remove(0);
-
-        //ui->boxSize->ad
-        //qDebug() << Product::shirts[index].thisItem.getName();
-        qDebug() << "before " << index;
         index++;
-        qDebug() << "after " << index;
 
     }else{
 

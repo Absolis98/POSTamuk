@@ -7,40 +7,15 @@
 #include <QtSql>
 #include <QtDebug>
 
-//#include "Product.h"
-/*
-struct Product{
-    QString name;
-    double price;
-    int available;
-    QString size;
+#include "Product.h"
+#include "InventoryAttributes.h"
+#include "InventoryItems.h"
+#include <iostream>
+#include "ItemCard.h"
 
-    void setName(QString n){
-        this->name = n;
-    }
-    void setPrice(double p){
-        this->price = p;
-    }
-    void setAvailable(int a){
-        this->available = a;
-    }
-    void setSize(QString s){
-        this->size = s;
-    }
-    QString getName(){
-        return name;
-    }
-    double getPrice(){
-        return price;
-    }
-    int getAvailable(){
-        return available;
-    }
-    QString getSize(){
-        return size;
-    }
-};
-*/
+
+
+using namespace std;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -63,17 +38,16 @@ public:
 
     QSqlQuery qry;
 
-    static QVector<QString> names;
-    static QVector<double> prices;
-    static QVector<int> available;
-    static QVector<QString> sizes;
+    //static QVector<QString> names;
+    //static QVector<double> prices;
+    //static QVector<int> available;
+    //static QVector<QString> sizes;
+
+
 
     //static QVector<Product> products;
 
-    //static QVector<QString> namesC;
-    //static QVector<double> pricesC;
-    //static QVector<int> availableC;
-    //static QVector<QString> sizesC;
+
 
     //QVector<InventoryItems> getActiveItems();
     //QVector<Product> makeProducts(QVector<InventoryItems> &II, QVector<InventoryAttributes> &&IA);

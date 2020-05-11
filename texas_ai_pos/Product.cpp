@@ -6,6 +6,13 @@ QVector<Product> Product::DBProducts;
 QVector<InventoryItems> Product::itemsVector;
 QVector<InventoryAttributes> Product::attsVector;
 
+QVector<Product> Product::shirts;
+QVector<Product> Product::sweatShirts;
+QVector<Product> Product::caps;
+QVector<Product> Product::cups;
+QVector<Product> Product::stickers;
+QVector<Product> Product::misc;
+
 double Product::total = 0.00;
 
 Product::Product()
@@ -22,6 +29,85 @@ Product::Product(InventoryItems iI, InventoryAttributes iA)
 Product::~Product()
 {
     //dtor
+}
+
+QVector<InventoryItems> Product::getActiveItems()
+{
+    int numItems = 0;
+    QVector<InventoryItems> itemsVector;
+    QSqlQuery qry;
+
+
+
+    if(qry.exec("SELECT id, name, category, description, imageID FROM inventory_items WHERE active=1"))
+    {
+        while(qry.next())
+        {
+            numItems++;
+            itemsVector.resize(numItems);
+
+            int id;
+            QString name;
+            QString category;
+            QString description;
+            QString imageID;
+
+
+            id = qry.value(0).toInt();
+            name = qry.value(1).toString();
+            category = qry.value(2).toString();
+            description = qry.value(3).toString();
+            //imageID = qry.value(0).toString();
+
+            itemsVector[numItems - 1].setID(id);
+            itemsVector[numItems - 1].setName(name);
+            itemsVector[numItems - 1].setCategory(category);
+            itemsVector[numItems - 1].setDescription(description);
+         }
+    }
+    //qDebug() << itemsVector;
+
+    return itemsVector;
+}
+
+QVector<InventoryAttributes> Product::getActiveAtts()
+{
+    int numAttributes = 0;
+    QVector<InventoryAttributes> attsVector;
+    QSqlQuery qry;
+
+
+
+    if(qry.exec("Select attributeID, itemID, attribute, quantity, price FROM inventory_attributes;"))
+    {
+        while(qry.next())
+        {
+            numAttributes++;
+            attsVector.resize(numAttributes);
+
+            int attID;
+            int itemID;
+            QString attribute;
+            int quantity;
+            double price;
+
+
+            attID = qry.value(0).toInt();
+            itemID = qry.value(1).toInt();
+            attribute = qry.value(2).toString();
+            quantity = qry.value(3).toInt();
+            price = qry.value(4).toDouble();
+
+            attsVector[numAttributes - 1].setAttID(attID);
+            attsVector[numAttributes - 1].setID(itemID);
+            attsVector[numAttributes - 1].setAttribute(attribute);
+            attsVector[numAttributes - 1].setQuantity(quantity);
+            attsVector[numAttributes - 1].setPrice(price);
+         }
+    }
+    //qDebug() << itemsVector;
+
+    return attsVector;
 }
 
 void Product::addToCartBtn()
@@ -105,4 +191,95 @@ QVector<Product> Product::makeProducts(QVector<InventoryItems> & II, QVector<Inv
     }
 
         return DBProducts;
+}
+
+void Product::printCard()
+{
+    qDebug() << "name: " << (*this).thisItem.getName() << endl;
+    qDebug() << "size: " << (*this).thisAtt.getAttribute() << endl;
+    qDebug() << "description: " << (*this).thisItem.getDescription() << endl;
+    qDebug() << "price: $" << (*this).thisAtt.getPrice() << endl;
+    qDebug() << "in stock: " << (*this).thisAtt.getQuantity() << endl;
+    qDebug() << "------------------------------------------" << endl;
+}
+
+void Product::printDBProducts()
+{
+
+    qDebug() << "Here are all Active Products: ";
+    for (int i = 0; i < DBProducts.size(); i++) {
+        if(DBProducts[i].thisItem.getCategory() == "shirt")
+        DBProducts[i].printCard();
+    }
+
+}
+
+void Product::makeShirtsVector()
+{
+    for (int i = 0; i < DBProducts.size(); i++) {
+        if(DBProducts[i].thisItem.getCategory() == "shirt")
+        shirts.push_back(DBProducts[i]);
+    }
+    qDebug() << shirts[0].thisItem.getName();
+
+}
+
+void Product::makeSweatShirtsVector()
+{
+    for (int i = 0; i < DBProducts.size(); i++) {
+        if(DBProducts[i].thisItem.getCategory() == "sweatshirt")
+        sweatShirts.push_back(DBProducts[i]);
+    }
+    qDebug() << sweatShirts[0].thisItem.getName();
+
+}
+
+void Product::makeCapsVector()
+{
+    for (int i = 0; i < DBProducts.size(); i++) {
+        if(DBProducts[i].thisItem.getCategory() == "cap")
+        caps.push_back(DBProducts[i]);
+    }
+    qDebug() << caps[0].thisItem.getName();
+
+}
+
+void Product::makeCupsVector()
+{
+    for (int i = 0; i < DBProducts.size(); i++) {
+        if(DBProducts[i].thisItem.getCategory() == "cup")
+        cups.push_back(DBProducts[i]);
+    }
+    qDebug() << cups[0].thisItem.getName();
+
+}
+
+void Product::makeStickersVector()
+{
+    for (int i = 0; i < DBProducts.size(); i++) {
+        if(DBProducts[i].thisItem.getCategory() == "sticker")
+        stickers.push_back(DBProducts[i]);
+    }
+    qDebug() << stickers[0].thisItem.getName();
+
+}
+
+void Product::makeMiscVector()
+{
+    for (int i = 0; i < DBProducts.size(); i++) {
+        if(DBProducts[i].thisItem.getCategory() == "misc")
+        misc.push_back(DBProducts[i]);
+    }
+    qDebug() << misc[0].thisItem.getName();
+
+}
+
+void Product::makeAllVectors()
+{
+    makeShirtsVector();
+    makeSweatShirtsVector();
+    makeCapsVector();
+    makeCupsVector();
+    makeStickersVector();
+    makeMiscVector();
 }
