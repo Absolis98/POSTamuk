@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1757</width>
-    <height>998</height>
+    <width>1698</width>
+    <height>966</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout" stretch="20,60,0">
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="10,60,15">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
@@ -155,25 +155,24 @@
        <property name="title">
         <string>Products:</string>
        </property>
-       <layout class="QGridLayout" name="gridLayout" rowstretch="0,30,30,5">
-        <item row="3" column="1">
-         <widget class="QPushButton" name="pushButton_12">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Previous Page</string>
-          </property>
-         </widget>
+       <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0">
+        <item row="1" column="0">
+         <widget class="ItemCard" name="widget_6" native="true"/>
         </item>
         <item row="2" column="2">
          <widget class="ItemCard" name="widget_5" native="true"/>
         </item>
         <item row="1" column="1">
          <widget class="ItemCard" name="widget" native="true"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="ItemCard" name="widget_2" native="true"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="ItemCard" name="widget_3" native="true"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="ItemCard" name="widget_4" native="true"/>
         </item>
         <item row="3" column="2">
          <widget class="QPushButton" name="pushButton_11">
@@ -187,18 +186,6 @@
            <string>Next Page</string>
           </property>
          </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="ItemCard" name="widget_2" native="true"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="ItemCard" name="widget_3" native="true"/>
-        </item>
-        <item row="2" column="1">
-         <widget class="ItemCard" name="widget_4" native="true"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="ItemCard" name="widget_6" native="true"/>
         </item>
        </layout>
       </widget>

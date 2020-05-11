@@ -1,10 +1,11 @@
+debug/Checkout.o
 debug/InventoryAttributes.o
 debug/InventoryItems.o
 debug/ItemCard.o
 debug/Product.o
-debug/Register.o
 debug/main.o
 debug/Widget.o
 debug/qrc_pics.o
+debug/moc_Checkout.o
 debug/moc_ItemCard.o
 debug/moc_Widget.o

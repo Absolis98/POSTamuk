@@ -12,6 +12,7 @@
 #include "InventoryItems.h"
 #include <iostream>
 #include "ItemCard.h"
+#include "Checkout.h"
 
 
 
@@ -87,6 +88,8 @@ private slots:
     void on_widget_4_addToCartPushed();
 
     void on_widget_5_addToCartPushed();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::Widget *ui;

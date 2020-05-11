@@ -2,6 +2,8 @@
 #define CHECKOUT_H
 
 #include <QDialog>
+#include "Product.h"
+#include "Widget.h"
 
 namespace Ui {
 class Checkout;
@@ -14,6 +16,9 @@ class Checkout : public QDialog
 public:
     explicit Checkout(QWidget *parent = nullptr);
     ~Checkout();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::Checkout *ui;

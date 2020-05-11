@@ -41,14 +41,13 @@ public:
     QLabel *label;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout;
-    QPushButton *pushButton_12;
+    ItemCard *widget_6;
     ItemCard *widget_5;
     ItemCard *widget;
-    QPushButton *pushButton_11;
     ItemCard *widget_2;
     ItemCard *widget_3;
     ItemCard *widget_4;
-    ItemCard *widget_6;
+    QPushButton *pushButton_11;
     QVBoxLayout *verticalLayout_7;
     QGroupBox *groupBox_4;
     QVBoxLayout *verticalLayout_8;
@@ -62,7 +61,7 @@ public:
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QString::fromUtf8("Widget"));
-        Widget->resize(1757, 998);
+        Widget->resize(1698, 966);
         horizontalLayout = new QHBoxLayout(Widget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         verticalLayout_3 = new QVBoxLayout();
@@ -152,12 +151,10 @@ public:
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         gridLayout = new QGridLayout(groupBox_2);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        pushButton_12 = new QPushButton(groupBox_2);
-        pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
-        sizePolicy1.setHeightForWidth(pushButton_12->sizePolicy().hasHeightForWidth());
-        pushButton_12->setSizePolicy(sizePolicy1);
+        widget_6 = new ItemCard(groupBox_2);
+        widget_6->setObjectName(QString::fromUtf8("widget_6"));
 
-        gridLayout->addWidget(pushButton_12, 3, 1, 1, 1);
+        gridLayout->addWidget(widget_6, 1, 0, 1, 1);
 
         widget_5 = new ItemCard(groupBox_2);
         widget_5->setObjectName(QString::fromUtf8("widget_5"));
@@ -168,13 +165,6 @@ public:
         widget->setObjectName(QString::fromUtf8("widget"));
 
         gridLayout->addWidget(widget, 1, 1, 1, 1);
-
-        pushButton_11 = new QPushButton(groupBox_2);
-        pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
-        sizePolicy1.setHeightForWidth(pushButton_11->sizePolicy().hasHeightForWidth());
-        pushButton_11->setSizePolicy(sizePolicy1);
-
-        gridLayout->addWidget(pushButton_11, 3, 2, 1, 1);
 
         widget_2 = new ItemCard(groupBox_2);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
@@ -191,14 +181,13 @@ public:
 
         gridLayout->addWidget(widget_4, 2, 1, 1, 1);
 
-        widget_6 = new ItemCard(groupBox_2);
-        widget_6->setObjectName(QString::fromUtf8("widget_6"));
+        pushButton_11 = new QPushButton(groupBox_2);
+        pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
+        sizePolicy1.setHeightForWidth(pushButton_11->sizePolicy().hasHeightForWidth());
+        pushButton_11->setSizePolicy(sizePolicy1);
 
-        gridLayout->addWidget(widget_6, 1, 0, 1, 1);
+        gridLayout->addWidget(pushButton_11, 3, 2, 1, 1);
 
-        gridLayout->setRowStretch(1, 30);
-        gridLayout->setRowStretch(2, 30);
-        gridLayout->setRowStretch(3, 5);
 
         verticalLayout_6->addWidget(groupBox_2);
 
@@ -253,8 +242,9 @@ public:
 
         horizontalLayout->addLayout(verticalLayout_7);
 
-        horizontalLayout->setStretch(0, 20);
+        horizontalLayout->setStretch(0, 10);
         horizontalLayout->setStretch(1, 60);
+        horizontalLayout->setStretch(2, 15);
 
         retranslateUi(Widget);
         QObject::connect(btnShirts, SIGNAL(clicked()), widget_6, SLOT(setShirts()));
@@ -286,7 +276,6 @@ public:
         pushButton_13->setText(QCoreApplication::translate("Widget", "Misc", nullptr));
         label->setText(QCoreApplication::translate("Widget", "Texas A&I Store", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("Widget", "Products:", nullptr));
-        pushButton_12->setText(QCoreApplication::translate("Widget", "Previous Page", nullptr));
         pushButton_11->setText(QCoreApplication::translate("Widget", "Next Page", nullptr));
         groupBox_4->setTitle(QCoreApplication::translate("Widget", "Cart:", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "Total:", nullptr));

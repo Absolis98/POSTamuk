@@ -131,3 +131,10 @@ void Widget::on_widget_5_addToCartPushed()
 {
     updateCart();
 }
+
+void Widget::on_pushButton_2_clicked()
+{
+    Checkout checkout;
+    checkout.setModal(true);
+    checkout.exec();
+}
