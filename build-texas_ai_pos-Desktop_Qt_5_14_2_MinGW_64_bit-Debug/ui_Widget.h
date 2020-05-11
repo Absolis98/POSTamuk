@@ -263,6 +263,12 @@ public:
         QObject::connect(btnShirts, SIGNAL(clicked()), widget_3, SLOT(setShirts()));
         QObject::connect(btnShirts, SIGNAL(clicked()), widget_4, SLOT(setShirts()));
         QObject::connect(btnShirts, SIGNAL(clicked()), widget_5, SLOT(setShirts()));
+        QObject::connect(btnCaps, SIGNAL(clicked()), widget_6, SLOT(setCaps()));
+        QObject::connect(btnCaps, SIGNAL(clicked()), widget, SLOT(setCaps()));
+        QObject::connect(btnCaps, SIGNAL(clicked()), widget_2, SLOT(setCaps()));
+        QObject::connect(btnCaps, SIGNAL(clicked()), widget_3, SLOT(setCaps()));
+        QObject::connect(btnCaps, SIGNAL(clicked()), widget_4, SLOT(setCaps()));
+        QObject::connect(btnCaps, SIGNAL(clicked()), widget_5, SLOT(setCaps()));
 
         QMetaObject::connectSlotsByName(Widget);
     } // setupUi

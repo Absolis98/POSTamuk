@@ -69,6 +69,7 @@ signals:
 
 private slots:
     void on_btnShirts_clicked();
+    void on_btnCaps_clicked();
 
 
 private:

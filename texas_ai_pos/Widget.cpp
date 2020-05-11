@@ -7,7 +7,7 @@
 //QVector<QString> Widget::sizes;
 //QVector<Product> Widget::products;
 
-
+//int ItemCard::index;
 
 Widget::Widget(QWidget *parent)
 :QWidget(parent), ui(new Ui::Widget)
@@ -29,17 +29,25 @@ Widget::Widget(QWidget *parent)
         //qDebug() << "Opened";
 
         //getActiveItems();
+
+
+
     QVector<InventoryItems> itemVec;
     QVector<InventoryAttributes> attVec;
     Product x;
     itemVec = x.getActiveItems();
     attVec = x.getActiveAtts();
-
-    qDebug() << itemVec[0].getName();
-    qDebug() << attVec[0].getAttID();
     Product::makeProducts(itemVec, attVec);
     Product::printDBProducts();
     Product::makeAllVectors();
+
+
+
+
+
+    qDebug() << itemVec[0].getName();
+    qDebug() << attVec[0].getAttID();
+
 
 
 
@@ -62,14 +70,17 @@ Widget::~Widget()
 
 void Widget::on_btnShirts_clicked()
 {
+    qDebug() << ItemCard::index;
     ItemCard::index = 0;
-
-
-
-
-
-
-
-
+    qDebug() << ItemCard::index;
 
 }
+
+void Widget::on_btnCaps_clicked()
+{
+    //qDebug() << ItemCard::index;
+    ItemCard::index = 0;
+    //qDebug() << ItemCard::index;
+
+}
+

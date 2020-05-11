@@ -30,23 +30,21 @@ public:
 
     static int index;
 
-    /*
-    static QVector<QString> names;
-    static QVector<double> prices;
-    static QVector<int> available;
-    static QVector<QString> sizes;
-    */
+
 signals:
     void signal1();
 
 public slots:
     void setShirts();
     //void setSweatShirts();
+    void setCaps();
     //void setCups();
     //void setMisc();
     //void setStickers();
-    //void setCaps();
-    //static void createItemVectors();
+
+
+    void sizeChanged();
+
 
 private:
     Ui::ItemCard *ui;
