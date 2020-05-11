@@ -32,7 +32,8 @@ public:
 
 
 signals:
-    void signal1();
+    void addToCartPushed();
+
 
 public slots:
     void setShirts();
@@ -41,9 +42,14 @@ public slots:
     //void setCups();
     //void setMisc();
     //void setStickers();
+    void addToCart();
 
 
     void sizeChanged();
+
+
+private slots:
+    void on_btnAddToCart_clicked();
 
 
 private:

@@ -1,7 +1,7 @@
 #ifndef WIDGET_H
 #define WIDGET_H
 
-//#include "ItemCard.h"
+#include "ItemCard.h"
 
 #include <QWidget>
 #include <QtSql>
@@ -38,6 +38,9 @@ public:
 
     QSqlQuery qry;
 
+
+    void updateCart();
+
     //static QVector<QString> names;
     //static QVector<double> prices;
     //static QVector<int> available;
@@ -71,6 +74,19 @@ private slots:
     void on_btnShirts_clicked();
     void on_btnCaps_clicked();
 
+
+
+    void on_widget_6_addToCartPushed();
+
+    void on_widget_addToCartPushed();
+
+    void on_widget_2_addToCartPushed();
+
+    void on_widget_3_addToCartPushed();
+
+    void on_widget_4_addToCartPushed();
+
+    void on_widget_5_addToCartPushed();
 
 private:
     Ui::Widget *ui;

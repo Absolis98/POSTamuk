@@ -7,6 +7,7 @@
 #include <QVector>
 #include <QtSql>
 #include <QSqlQuery>
+#include "ItemCard.h"
 //#include "Widget.h"
 
 class Product
@@ -39,6 +40,7 @@ public:
     QVector<InventoryAttributes> getActiveAtts(); //returns a vector containing all active att objects
 
     void printCard();
+
 
     static void clearCart();
     void remFromCart();

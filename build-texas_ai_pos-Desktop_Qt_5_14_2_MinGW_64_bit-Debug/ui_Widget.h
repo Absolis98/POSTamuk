@@ -15,7 +15,7 @@
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -41,21 +41,21 @@ public:
     QLabel *label;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout;
-    QPushButton *pushButton_11;
     QPushButton *pushButton_12;
+    ItemCard *widget_5;
     ItemCard *widget;
+    QPushButton *pushButton_11;
     ItemCard *widget_2;
     ItemCard *widget_3;
     ItemCard *widget_4;
-    ItemCard *widget_5;
     ItemCard *widget_6;
     QVBoxLayout *verticalLayout_7;
     QGroupBox *groupBox_4;
     QVBoxLayout *verticalLayout_8;
-    QListView *listView;
+    QListWidget *listWidget;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
-    QLabel *label_3;
+    QLabel *lblTotal;
     QPushButton *pushButton_2;
 
     void setupUi(QWidget *Widget)
@@ -152,13 +152,6 @@ public:
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         gridLayout = new QGridLayout(groupBox_2);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        pushButton_11 = new QPushButton(groupBox_2);
-        pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
-        sizePolicy1.setHeightForWidth(pushButton_11->sizePolicy().hasHeightForWidth());
-        pushButton_11->setSizePolicy(sizePolicy1);
-
-        gridLayout->addWidget(pushButton_11, 3, 2, 1, 1);
-
         pushButton_12 = new QPushButton(groupBox_2);
         pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
         sizePolicy1.setHeightForWidth(pushButton_12->sizePolicy().hasHeightForWidth());
@@ -166,10 +159,22 @@ public:
 
         gridLayout->addWidget(pushButton_12, 3, 1, 1, 1);
 
+        widget_5 = new ItemCard(groupBox_2);
+        widget_5->setObjectName(QString::fromUtf8("widget_5"));
+
+        gridLayout->addWidget(widget_5, 2, 2, 1, 1);
+
         widget = new ItemCard(groupBox_2);
         widget->setObjectName(QString::fromUtf8("widget"));
 
         gridLayout->addWidget(widget, 1, 1, 1, 1);
+
+        pushButton_11 = new QPushButton(groupBox_2);
+        pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
+        sizePolicy1.setHeightForWidth(pushButton_11->sizePolicy().hasHeightForWidth());
+        pushButton_11->setSizePolicy(sizePolicy1);
+
+        gridLayout->addWidget(pushButton_11, 3, 2, 1, 1);
 
         widget_2 = new ItemCard(groupBox_2);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
@@ -186,18 +191,13 @@ public:
 
         gridLayout->addWidget(widget_4, 2, 1, 1, 1);
 
-        widget_5 = new ItemCard(groupBox_2);
-        widget_5->setObjectName(QString::fromUtf8("widget_5"));
-
-        gridLayout->addWidget(widget_5, 2, 2, 1, 1);
-
         widget_6 = new ItemCard(groupBox_2);
         widget_6->setObjectName(QString::fromUtf8("widget_6"));
 
         gridLayout->addWidget(widget_6, 1, 0, 1, 1);
 
-        gridLayout->setRowStretch(1, 33);
-        gridLayout->setRowStretch(2, 33);
+        gridLayout->setRowStretch(1, 30);
+        gridLayout->setRowStretch(2, 30);
         gridLayout->setRowStretch(3, 5);
 
         verticalLayout_6->addWidget(groupBox_2);
@@ -211,10 +211,10 @@ public:
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
         verticalLayout_8 = new QVBoxLayout(groupBox_4);
         verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
-        listView = new QListView(groupBox_4);
-        listView->setObjectName(QString::fromUtf8("listView"));
+        listWidget = new QListWidget(groupBox_4);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
 
-        verticalLayout_8->addWidget(listView);
+        verticalLayout_8->addWidget(listWidget);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
@@ -223,10 +223,10 @@ public:
 
         horizontalLayout_3->addWidget(label_2);
 
-        label_3 = new QLabel(groupBox_4);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        lblTotal = new QLabel(groupBox_4);
+        lblTotal->setObjectName(QString::fromUtf8("lblTotal"));
 
-        horizontalLayout_3->addWidget(label_3);
+        horizontalLayout_3->addWidget(lblTotal);
 
         horizontalLayout_3->setStretch(0, 10);
         horizontalLayout_3->setStretch(1, 90);
@@ -243,7 +243,7 @@ public:
 
         verticalLayout_8->addWidget(pushButton_2);
 
-        verticalLayout_8->setStretch(0, 80);
+        verticalLayout_8->setStretch(0, 90);
         verticalLayout_8->setStretch(1, 5);
         verticalLayout_8->setStretch(2, 15);
 
@@ -286,11 +286,11 @@ public:
         pushButton_13->setText(QCoreApplication::translate("Widget", "Misc", nullptr));
         label->setText(QCoreApplication::translate("Widget", "Texas A&I Store", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("Widget", "Products:", nullptr));
-        pushButton_11->setText(QCoreApplication::translate("Widget", "Next Page", nullptr));
         pushButton_12->setText(QCoreApplication::translate("Widget", "Previous Page", nullptr));
+        pushButton_11->setText(QCoreApplication::translate("Widget", "Next Page", nullptr));
         groupBox_4->setTitle(QCoreApplication::translate("Widget", "Cart:", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "Total:", nullptr));
-        label_3->setText(QCoreApplication::translate("Widget", "$0.00", nullptr));
+        lblTotal->setText(QCoreApplication::translate("Widget", "$0.00", nullptr));
         pushButton_2->setText(QCoreApplication::translate("Widget", "Checkout", nullptr));
     } // retranslateUi
 

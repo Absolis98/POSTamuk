@@ -56,6 +56,10 @@ Widget::Widget(QWidget *parent)
     }
 
 
+
+    //connect(ui->widget, SIGNAL(clicked()), ui->listWidget, SLOT(ItemCard::updateCart()));
+
+
     ui->setupUi(this);
 
 }
@@ -78,9 +82,52 @@ void Widget::on_btnShirts_clicked()
 
 void Widget::on_btnCaps_clicked()
 {
-    //qDebug() << ItemCard::index;
+    qDebug() << ItemCard::index;
     ItemCard::index = 0;
-    //qDebug() << ItemCard::index;
+    qDebug() << ItemCard::index;
 
 }
 
+void Widget::updateCart()
+{
+    ui->listWidget->clear();
+    for(int i = 0; i < Product::cart.count(); i++){
+        QString line = Product::cart[i].thisItem.getName() + QString("      $%1.00").arg(Product::cart[i].thisAtt.getPrice());
+        ui->listWidget->addItem(line);
+    }
+    Product::getTotal();
+    ui->lblTotal->setText(QString("$%1.00").arg(Product::total));
+
+
+}
+
+
+void Widget::on_widget_6_addToCartPushed()
+{
+   updateCart();
+}
+
+void Widget::on_widget_addToCartPushed()
+{
+    updateCart();
+}
+
+void Widget::on_widget_2_addToCartPushed()
+{
+    updateCart();
+}
+
+void Widget::on_widget_3_addToCartPushed()
+{
+    updateCart();
+}
+
+void Widget::on_widget_4_addToCartPushed()
+{
+    updateCart();
+}
+
+void Widget::on_widget_5_addToCartPushed()
+{
+    updateCart();
+}

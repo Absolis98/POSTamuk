@@ -115,9 +115,10 @@ void Product::addToCartBtn()
     for (int i = 0; i < selected; i++)
         cart.push_back(*this);
 
+    qDebug() << cart[0].thisItem.getName();
     //this may need to be moved into the for loop, depending on design
     //keeping it outside is more efficient
-    (*this).thisAtt.setQuantity((*this).thisAtt.getQuantity() - selected);
+    //(*this).thisAtt.setQuantity((*this).thisAtt.getQuantity() - selected);
 
 }
 
@@ -135,6 +136,7 @@ void Product::clearCart()
 
 double Product::getTotal()
 {
+    total = 0;
     for (int i = 0; i < cart.size(); i++) {
 
         total += cart[i].thisAtt.getPrice();

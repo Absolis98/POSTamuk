@@ -122,10 +122,21 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release/qrc_pics.cpp
 release/qrc_pics.cpp: ../texas_ai_pos/pics.qrc \
 		C:/Qt/5.14.2/mingw73_64/bin/rcc.exe \
+		../texas_ai_pos/pics/National\ Champs\ Cap.jpg \
+		../texas_ai_pos/pics/Texas\ A&I\ Sticker.jpg \
+		../texas_ai_pos/pics/A&I\ Engineer\ Sticker.jpg \
 		../texas_ai_pos/pics/alumni\ shirt.jpg \
+		../texas_ai_pos/pics/White\ A&I\ Cup.jpg \
 		../texas_ai_pos/pics/porky\ shirt.jpg \
+		../texas_ai_pos/pics/White\ Porky\ Mug.jpg \
 		../texas_ai_pos/pics/A&I\ Logo\ shirt.jpg \
+		../texas_ai_pos/pics/Black\ A&I\ Visor.jpg \
 		../texas_ai_pos/pics/porky.png \
+		../texas_ai_pos/pics/White\ A&I\ Visor.jpg \
+		../texas_ai_pos/pics/A&I\ Flag.jpg \
+		../texas_ai_pos/pics/Camo\ A&I\ Cap.jpg \
+		../texas_ai_pos/pics/Clear\ A&I\ Mug.jpg \
+		../texas_ai_pos/pics/Blue\ Zip-Up\ Hoodie.jpg \
 		../texas_ai_pos/pics/picture.jpg
 	'C:\Qt\5.14.2\mingw73_64\bin\rcc.exe' -name pics ../texas_ai_pos/pics.qrc -o release/qrc_pics.cpp
 
@@ -246,6 +257,11 @@ release/moc_ItemCard.cpp: ../texas_ai_pos/ItemCard.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVector \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
 		../texas_ai_pos/Widget.h \
+		../texas_ai_pos/ItemCard.h \
+		../texas_ai_pos/Product.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QString \
+		../texas_ai_pos/InventoryItems.h \
+		../texas_ai_pos/InventoryAttributes.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSql \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSqlDepends \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtCore \
@@ -405,18 +421,14 @@ release/moc_ItemCard.cpp: ../texas_ai_pos/ItemCard.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqltablemodel.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqlresult.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qtsqlversion.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtDebug \
-		../texas_ai_pos/Product.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QString \
-		../texas_ai_pos/InventoryItems.h \
-		../texas_ai_pos/InventoryAttributes.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QSqlQuery \
-		../texas_ai_pos/ItemCard.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtDebug \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_64/bin/moc.exe
 	'C:\Qt\5.14.2\mingw73_64\bin\moc.exe' $(DEFINES) --include 'C:/Users/abrah/OneDrive/Documents/College/Semester 6/Software Engineering/Mid Term Project/build-texas_ai_pos-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/release/moc_predefs.h' -IC:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++ -I'C:/Users/abrah/OneDrive/Documents/College/Semester 6/Software Engineering/Mid Term Project/texas_ai_pos' -IC:/Qt/5.14.2/mingw73_64/include -IC:/Qt/5.14.2/mingw73_64/include/QtWidgets -IC:/Qt/5.14.2/mingw73_64/include/QtGui -IC:/Qt/5.14.2/mingw73_64/include/QtANGLE -IC:/Qt/5.14.2/mingw73_64/include/QtSql -IC:/Qt/5.14.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ../texas_ai_pos/ItemCard.h -o release/moc_ItemCard.cpp
 
 release/moc_Widget.cpp: ../texas_ai_pos/Widget.h \
+		../texas_ai_pos/ItemCard.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qwidget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -521,6 +533,9 @@ release/moc_Widget.cpp: ../texas_ai_pos/Widget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVector \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
+		../texas_ai_pos/Widget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSql \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSqlDepends \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtCore \
@@ -685,11 +700,7 @@ release/moc_Widget.cpp: ../texas_ai_pos/Widget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QString \
 		../texas_ai_pos/InventoryItems.h \
 		../texas_ai_pos/InventoryAttributes.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVector \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QSqlQuery \
-		../texas_ai_pos/ItemCard.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
-		../texas_ai_pos/Widget.h \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_64/bin/moc.exe
 	'C:\Qt\5.14.2\mingw73_64\bin\moc.exe' $(DEFINES) --include 'C:/Users/abrah/OneDrive/Documents/College/Semester 6/Software Engineering/Mid Term Project/build-texas_ai_pos-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/release/moc_predefs.h' -IC:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++ -I'C:/Users/abrah/OneDrive/Documents/College/Semester 6/Software Engineering/Mid Term Project/texas_ai_pos' -IC:/Qt/5.14.2/mingw73_64/include -IC:/Qt/5.14.2/mingw73_64/include/QtWidgets -IC:/Qt/5.14.2/mingw73_64/include/QtGui -IC:/Qt/5.14.2/mingw73_64/include/QtANGLE -IC:/Qt/5.14.2/mingw73_64/include/QtSql -IC:/Qt/5.14.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ../texas_ai_pos/Widget.h -o release/moc_Widget.cpp
@@ -815,6 +826,11 @@ ui_Widget.h: ../texas_ai_pos/Widget.ui \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVector \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
 		../texas_ai_pos/Widget.h \
+		../texas_ai_pos/ItemCard.h \
+		../texas_ai_pos/Product.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QString \
+		../texas_ai_pos/InventoryItems.h \
+		../texas_ai_pos/InventoryAttributes.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSql \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSqlDepends \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtCore \
@@ -974,13 +990,8 @@ ui_Widget.h: ../texas_ai_pos/Widget.ui \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqltablemodel.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqlresult.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qtsqlversion.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtDebug \
-		../texas_ai_pos/Product.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QString \
-		../texas_ai_pos/InventoryItems.h \
-		../texas_ai_pos/InventoryAttributes.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QSqlQuery \
-		../texas_ai_pos/ItemCard.h
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtDebug
 	'C:\Qt\5.14.2\mingw73_64\bin\uic.exe' ../texas_ai_pos/Widget.ui -o ui_Widget.h
 
 compiler_yacc_decl_make_all:
@@ -1631,10 +1642,16 @@ release/Product.o: ../texas_ai_pos/Product.cpp ../texas_ai_pos/Product.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqltablemodel.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqlresult.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qtsqlversion.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtSql/QSqlQuery
+		C:/Qt/5.14.2/mingw73_64/include/QtSql/QSqlQuery \
+		../texas_ai_pos/ItemCard.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QWidget \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
+		../texas_ai_pos/Widget.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/Product.o ../texas_ai_pos/Product.cpp
 
 release/main.o: ../texas_ai_pos/main.cpp ../texas_ai_pos/Widget.h \
+		../texas_ai_pos/ItemCard.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qwidget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -1739,6 +1756,12 @@ release/main.o: ../texas_ai_pos/main.cpp ../texas_ai_pos/Widget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVector \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
+		../texas_ai_pos/Product.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QString \
+		../texas_ai_pos/InventoryItems.h \
+		../texas_ai_pos/InventoryAttributes.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSql \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSqlDepends \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtCore \
@@ -1898,15 +1921,8 @@ release/main.o: ../texas_ai_pos/main.cpp ../texas_ai_pos/Widget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqltablemodel.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqlresult.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qtsqlversion.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtDebug \
-		../texas_ai_pos/Product.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QString \
-		../texas_ai_pos/InventoryItems.h \
-		../texas_ai_pos/InventoryAttributes.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVector \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QSqlQuery \
-		../texas_ai_pos/ItemCard.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtDebug \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
@@ -1915,6 +1931,7 @@ release/main.o: ../texas_ai_pos/main.cpp ../texas_ai_pos/Widget.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/main.o ../texas_ai_pos/main.cpp
 
 release/Widget.o: ../texas_ai_pos/Widget.cpp ../texas_ai_pos/Widget.h \
+		../texas_ai_pos/ItemCard.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qwidget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -2019,6 +2036,12 @@ release/Widget.o: ../texas_ai_pos/Widget.cpp ../texas_ai_pos/Widget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVector \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
+		../texas_ai_pos/Product.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QString \
+		../texas_ai_pos/InventoryItems.h \
+		../texas_ai_pos/InventoryAttributes.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSql \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QtSqlDepends \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtCore \
@@ -2178,15 +2201,8 @@ release/Widget.o: ../texas_ai_pos/Widget.cpp ../texas_ai_pos/Widget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqltablemodel.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qsqlresult.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/qtsqlversion.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtDebug \
-		../texas_ai_pos/Product.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QString \
-		../texas_ai_pos/InventoryItems.h \
-		../texas_ai_pos/InventoryAttributes.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVector \
 		C:/Qt/5.14.2/mingw73_64/include/QtSql/QSqlQuery \
-		../texas_ai_pos/ItemCard.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QtDebug \
 		ui_Widget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVariant \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \

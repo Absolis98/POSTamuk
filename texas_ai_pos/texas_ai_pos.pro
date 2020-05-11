@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Checkout.cpp \
     InventoryAttributes.cpp \
     InventoryItems.cpp \
     ItemCard.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
     Widget.cpp
 
 HEADERS += \
+    Checkout.h \
     InventoryAttributes.h \
     InventoryItems.h \
     ItemCard.h \
@@ -31,6 +33,7 @@ HEADERS += \
     Widget.h
 
 FORMS += \
+    Checkout.ui \
     ItemCard.ui \
     Widget.ui
 
