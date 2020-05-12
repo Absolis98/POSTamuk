@@ -88,6 +88,34 @@ void Widget::on_btnCaps_clicked()
 
 }
 
+void Widget::on_btnSweatShirts_clicked()
+{
+    //qDebug() << ItemCard::index;
+    ItemCard::index = 0;
+    //qDebug() << ItemCard::index;
+}
+
+void Widget::on_btnCups_clicked()
+{
+    //qDebug() << ItemCard::index;
+    ItemCard::index = 0;
+    //qDebug() << ItemCard::index;
+}
+
+void Widget::on_btnStickers_clicked()
+{
+    //qDebug() << ItemCard::index;
+    ItemCard::index = 0;
+    //qDebug() << ItemCard::index;
+}
+
+void Widget::on_pushButton_13_clicked()
+{
+    //qDebug() << ItemCard::index;
+    ItemCard::index = 0;
+    //qDebug() << ItemCard::index;
+}
+
 void Widget::updateCart()
 {
     ui->listWidget->clear();
@@ -138,3 +166,11 @@ void Widget::on_pushButton_2_clicked()
     checkout.setModal(true);
     checkout.exec();
 }
+
+
+
+
+
+
+
+

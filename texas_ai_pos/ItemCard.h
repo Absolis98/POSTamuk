@@ -37,11 +37,11 @@ signals:
 
 public slots:
     void setShirts();
-    //void setSweatShirts();
+    void setSweatShirts();
     void setCaps();
-    //void setCups();
-    //void setMisc();
-    //void setStickers();
+    void setCups();
+    void setMisc();
+    void setStickers();
     void addToCart();
 
 

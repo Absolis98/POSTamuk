@@ -91,6 +91,14 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_btnSweatShirts_clicked();
+
+    void on_btnCups_clicked();
+
+    void on_btnStickers_clicked();
+
+    void on_pushButton_13_clicked();
+
 private:
     Ui::Widget *ui;
 };

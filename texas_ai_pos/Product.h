@@ -59,6 +59,8 @@ public:
     static void makeMiscVector();
     static void makeAllVectors();
 
+    static void updateQuantity();
+
     static QVector<Product> makeProducts(QVector<InventoryItems> & II, QVector<InventoryAttributes> & IA);
     static void printDBProducts();
 

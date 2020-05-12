@@ -27,4 +27,5 @@ void Checkout::on_pushButton_clicked()
     double cashGiven = ui->lineEdit->text().toDouble();
     double change = total - cashGiven;
     ui->lblChange->setText(QString("$%1.00").arg(change));
+    Product::updateQuantity();
 }

@@ -57,16 +57,82 @@ void ItemCard::setShirts()
         }
 
 
-        ui->boxSize->addItem(Product::DBProducts[index].thisAtt.getAttribute());
+        ui->boxSize->addItem(Product::shirts[index].thisAtt.getAttribute());
+        connect(ui->boxSize, SIGNAL(currentTextChanged(QString)), this, SLOT(sizeChanged()));
+
+
+        do{
+            index++;
+            //qDebug() << Product::DBProducts[index].thisAtt.getAttribute();
+            ui->boxSize->addItem(Product::shirts[index].thisAtt.getAttribute());
+
+
+
+        }while(Product::DBProducts[index].thisItem.getID() == Product::DBProducts[index+1].thisItem.getID());
+
+        /*
+        do{
+            index++;
+            //qDebug() << Product::DBProducts[index].thisAtt.getAttribute();
+
+
+
+        }while(Product::shirts[index].thisItem.getID() == Product::shirts[index+1].thisItem.getID());
+
+        */
+        index++;
+
+    }else{
+
+        ui->lblItemName->setText("");
+        ui->lblPrice->setText("");
+        ui->lblCount->setText("");
+        ui->lblImage->clear();
+
+    }
+
+}
+
+void ItemCard::setSweatShirts()
+{
+
+    //qDebug() << index;
+    ui->boxSize->clear();
+    if(index < Product::sweatShirts.count())
+    {
+
+
+        QPixmap blue(":/res/pics/pics/Blue Zip-Up Hoodie.jpg");
+
+        int w = ui->lblImage->width();
+        int h = ui->lblImage->height();
+
+
+
+
+        ui->lblItemName->setText(Product::sweatShirts[index].thisItem.getName());
+        ui->lblPrice->setText(QString("$%1.00").arg(Product::sweatShirts[index].thisAtt.getPrice()));
+        ui->lblCount->setNum(Product::sweatShirts[index].thisAtt.getQuantity());
+
+
+
+        QString wop = ui->lblItemName->text();
+
+        if(wop == "Blue Zip-Up Hoodie"){
+            ui->lblImage->setPixmap(blue.scaled(w,h,Qt::KeepAspectRatio));
+        }
+
+
+        ui->boxSize->addItem(Product::sweatShirts[index].thisAtt.getAttribute());
         connect(ui->boxSize, SIGNAL(currentTextChanged(QString)), this, SLOT(sizeChanged()));
 
         do{
             index++;
             //qDebug() << Product::DBProducts[index].thisAtt.getAttribute();
 
-            ui->boxSize->addItem(Product::DBProducts[index].thisAtt.getAttribute());
+            ui->boxSize->addItem(Product::sweatShirts[index].thisAtt.getAttribute());
 
-        }while(Product::DBProducts[index].thisItem.getID() == Product::DBProducts[index+1].thisItem.getID());
+        }while(Product::DBProducts[index + 18].thisItem.getID() == Product::DBProducts[index+19].thisItem.getID());
 
 
         index++;
@@ -81,6 +147,8 @@ void ItemCard::setShirts()
     }
 
 }
+
+
 
 void ItemCard::setCaps()
 {
@@ -135,38 +203,177 @@ void ItemCard::setCaps()
 
 }
 
+void ItemCard::setCups()
+{
+    ui->boxSize->clear();
+    //qDebug() << Product::caps.count();
+    if(index < Product::cups.count())
+    {
+
+
+        QPixmap cup(":/res/pics/pics/White A&I Cup.jpg");
+        QPixmap white(":/res/pics/pics/White Porky Mug.jpg");
+        QPixmap clear(":/res/pics/pics/Clear A&I Mug.jpg");
+
+        int w = ui->lblImage->width();
+        int h = ui->lblImage->height();
+
+
+
+
+        ui->lblItemName->setText(Product::cups[index].thisItem.getName());
+        ui->lblPrice->setText(QString("$%1.00").arg(Product::cups[index].thisAtt.getPrice()));
+        ui->lblCount->setNum(Product::cups[index].thisAtt.getQuantity());
+
+
+
+        QString wop = ui->lblItemName->text();
+
+        if(wop == "White A&I Cup"){
+            ui->lblImage->setPixmap(cup.scaled(w,h,Qt::KeepAspectRatio));
+        }else if(wop == ("White Porky Mug")){
+                ui->lblImage->setPixmap(white.scaled(w,h,Qt::KeepAspectRatio));
+        }else if(wop == ("Clear A&I Mug")){
+                ui->lblImage->setPixmap(clear.scaled(w,h,Qt::KeepAspectRatio));
+        }
+
+        ui->boxSize->addItem("one size");
+
+
+        index++;
+
+    }else{
+
+        ui->lblItemName->setText("");
+        ui->lblPrice->setText("");
+        ui->lblCount->setText("");
+        ui->lblImage->clear();
+    }
+
+}
+
+void ItemCard::setStickers()
+{
+    ui->boxSize->clear();
+    //qDebug() << Product::caps.count();
+    if(index < Product::stickers.count())
+    {
+
+
+        QPixmap ai(":/res/pics/pics/Texas A&I Sticker.jpg");
+        QPixmap eng(":/res/pics/pics/A&I Engineer Sticker.jpg");
+
+        int w = ui->lblImage->width();
+        int h = ui->lblImage->height();
+
+
+
+
+        ui->lblItemName->setText(Product::stickers[index].thisItem.getName());
+        ui->lblPrice->setText(QString("$%1.00").arg(Product::stickers[index].thisAtt.getPrice()));
+        ui->lblCount->setNum(Product::stickers[index].thisAtt.getQuantity());
+
+
+
+        QString wop = ui->lblItemName->text();
+
+        if(wop == "Texas A&I Sticker"){
+            ui->lblImage->setPixmap(ai.scaled(w,h,Qt::KeepAspectRatio));
+        }else if(wop == ("A&I Engineer Sticker")){
+                ui->lblImage->setPixmap(eng.scaled(w,h,Qt::KeepAspectRatio));
+        }
+
+        ui->boxSize->addItem("one size");
+
+
+        index++;
+
+    }else{
+
+        ui->lblItemName->setText("");
+        ui->lblPrice->setText("");
+        ui->lblCount->setText("");
+        ui->lblImage->clear();
+    }
+
+}
+
+void ItemCard::setMisc()
+{
+    ui->boxSize->clear();
+    //qDebug() << Product::caps.count();
+    if(index < Product::misc.count())
+    {
+
+
+        QPixmap flag(":/res/pics/pics/A&I Flag.jpg");
+
+        int w = ui->lblImage->width();
+        int h = ui->lblImage->height();
+
+
+
+
+        ui->lblItemName->setText(Product::misc[index].thisItem.getName());
+        ui->lblPrice->setText(QString("$%1.00").arg(Product::misc[index].thisAtt.getPrice()));
+        ui->lblCount->setNum(Product::misc[index].thisAtt.getQuantity());
+
+
+
+        QString wop = ui->lblItemName->text();
+
+        if(wop == "A&I Flag"){
+            ui->lblImage->setPixmap(flag.scaled(w,h,Qt::KeepAspectRatio));
+        }
+
+        ui->boxSize->addItem("one size");
+
+
+        index++;
+
+    }else{
+
+        ui->lblItemName->setText("");
+        ui->lblPrice->setText("");
+        ui->lblCount->setText("");
+        ui->lblImage->clear();
+    }
+
+}
+
 
 //could be a bug in here. change the size, add to cart. add to cart again and the incorrect object is added to the cart vector
 void ItemCard::sizeChanged()
 {
     int index2 = 0;
 
+    //if(ui->)
     if(ui->boxSize->currentText() == "small"){
-        for(; index2 < Product::shirts.count(); index2++){
-            if(Product::shirts[index2].thisItem.getName() == ui->lblItemName->text() && Product::shirts[index2].thisAtt.getAttribute() == ui->boxSize->currentText())
+        for(; index2 < Product::DBProducts.count(); index2++){
+            if(Product::DBProducts[index2].thisItem.getName() == ui->lblItemName->text() && Product::DBProducts[index2].thisAtt.getAttribute() == ui->boxSize->currentText())
                 break;
         }
         //qDebug() << index2;
-        ui->lblPrice->setText(QString("$%1.00").arg(Product::shirts[index2].thisAtt.getPrice()));
-        ui->lblCount->setText(QString::number(Product::shirts[index2].thisAtt.getQuantity()));
+        ui->lblPrice->setText(QString("$%1.00").arg(Product::DBProducts[index2].thisAtt.getPrice()));
+        ui->lblCount->setText(QString::number(Product::DBProducts[index2].thisAtt.getQuantity()));
     }
     else if(ui->boxSize->currentText() == "medium"){
-        for(; index2 < Product::shirts.count(); index2++){
-            if(Product::shirts[index2].thisItem.getName() == ui->lblItemName->text() && Product::shirts[index2].thisAtt.getAttribute() == ui->boxSize->currentText())
+        for(; index2 < Product::DBProducts.count(); index2++){
+            if(Product::DBProducts[index2].thisItem.getName() == ui->lblItemName->text() && Product::DBProducts[index2].thisAtt.getAttribute() == ui->boxSize->currentText())
                 break;
         }
         //qDebug() << index2;
-        ui->lblPrice->setText(QString("$%1.00").arg(Product::shirts[index2].thisAtt.getPrice()));
-        ui->lblCount->setText(QString::number(Product::shirts[index2].thisAtt.getQuantity()));
+        ui->lblPrice->setText(QString("$%1.00").arg(Product::DBProducts[index2].thisAtt.getPrice()));
+        ui->lblCount->setText(QString::number(Product::DBProducts[index2].thisAtt.getQuantity()));
     }
     else if(ui->boxSize->currentText() == "large"){
-        for(; index2 < Product::shirts.count(); index2++){
-            if(Product::shirts[index2].thisItem.getName() == ui->lblItemName->text() && Product::shirts[index2].thisAtt.getAttribute() == ui->boxSize->currentText())
+        for(; index2 < Product::DBProducts.count(); index2++){
+            if(Product::DBProducts[index2].thisItem.getName() == ui->lblItemName->text() && Product::DBProducts[index2].thisAtt.getAttribute() == ui->boxSize->currentText())
                 break;
         }
         //qDebug() << index2;
-        ui->lblPrice->setText(QString("$%1.00").arg(Product::shirts[index2].thisAtt.getPrice()));
-        ui->lblCount->setText(QString::number(Product::shirts[index2].thisAtt.getQuantity()));
+        ui->lblPrice->setText(QString("$%1.00").arg(Product::DBProducts[index2].thisAtt.getPrice()));
+        ui->lblCount->setText(QString::number(Product::DBProducts[index2].thisAtt.getQuantity()));
     }
 
 }
@@ -178,6 +385,7 @@ void ItemCard::addToCart(){
         if((Product::DBProducts[index2].thisItem.getName() == ui->lblItemName->text()) && (Product::DBProducts[index2].thisAtt.getAttribute() == ui->boxSize->currentText()))
             break;
     }
+    qDebug() << index2;
 
     for (int i = 0; i < ui->boxCount->value(); i++)
         Product::cart.push_back(Product::DBProducts[index2]);

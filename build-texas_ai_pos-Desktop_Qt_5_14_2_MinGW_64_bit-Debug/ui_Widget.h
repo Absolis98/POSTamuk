@@ -188,6 +188,9 @@ public:
 
         gridLayout->addWidget(pushButton_11, 3, 2, 1, 1);
 
+        gridLayout->setRowStretch(1, 30);
+        gridLayout->setRowStretch(2, 30);
+        gridLayout->setRowStretch(3, 5);
 
         verticalLayout_6->addWidget(groupBox_2);
 
@@ -259,6 +262,30 @@ public:
         QObject::connect(btnCaps, SIGNAL(clicked()), widget_3, SLOT(setCaps()));
         QObject::connect(btnCaps, SIGNAL(clicked()), widget_4, SLOT(setCaps()));
         QObject::connect(btnCaps, SIGNAL(clicked()), widget_5, SLOT(setCaps()));
+        QObject::connect(btnSweatShirts, SIGNAL(clicked()), widget_6, SLOT(setSweatShirts()));
+        QObject::connect(btnSweatShirts, SIGNAL(clicked()), widget, SLOT(setSweatShirts()));
+        QObject::connect(btnSweatShirts, SIGNAL(clicked()), widget_2, SLOT(setSweatShirts()));
+        QObject::connect(btnSweatShirts, SIGNAL(clicked()), widget_3, SLOT(setSweatShirts()));
+        QObject::connect(btnSweatShirts, SIGNAL(clicked()), widget_4, SLOT(setSweatShirts()));
+        QObject::connect(btnSweatShirts, SIGNAL(clicked()), widget_5, SLOT(setSweatShirts()));
+        QObject::connect(btnCups, SIGNAL(clicked()), widget_6, SLOT(setCups()));
+        QObject::connect(btnCups, SIGNAL(clicked()), widget, SLOT(setCups()));
+        QObject::connect(btnCups, SIGNAL(clicked()), widget_2, SLOT(setCups()));
+        QObject::connect(btnCups, SIGNAL(clicked()), widget_3, SLOT(setCups()));
+        QObject::connect(btnCups, SIGNAL(clicked()), widget_4, SLOT(setCups()));
+        QObject::connect(btnCups, SIGNAL(clicked()), widget_5, SLOT(setCups()));
+        QObject::connect(btnStickers, SIGNAL(clicked()), widget_6, SLOT(setStickers()));
+        QObject::connect(btnStickers, SIGNAL(clicked()), widget, SLOT(setStickers()));
+        QObject::connect(btnStickers, SIGNAL(clicked()), widget_2, SLOT(setStickers()));
+        QObject::connect(btnStickers, SIGNAL(clicked()), widget_3, SLOT(setStickers()));
+        QObject::connect(btnStickers, SIGNAL(clicked()), widget_4, SLOT(setStickers()));
+        QObject::connect(btnStickers, SIGNAL(clicked()), widget_5, SLOT(setStickers()));
+        QObject::connect(pushButton_13, SIGNAL(clicked()), widget_6, SLOT(setMisc()));
+        QObject::connect(pushButton_13, SIGNAL(clicked()), widget, SLOT(setMisc()));
+        QObject::connect(pushButton_13, SIGNAL(clicked()), widget_2, SLOT(setMisc()));
+        QObject::connect(pushButton_13, SIGNAL(clicked()), widget_3, SLOT(setMisc()));
+        QObject::connect(pushButton_13, SIGNAL(clicked()), widget_4, SLOT(setMisc()));
+        QObject::connect(pushButton_13, SIGNAL(clicked()), widget_5, SLOT(setMisc()));
 
         QMetaObject::connectSlotsByName(Widget);
     } // setupUi

@@ -209,8 +209,8 @@ void Product::printDBProducts()
 {
 
     qDebug() << "Here are all Active Products: ";
+    qDebug() << "There are " << DBProducts.size() << " products";
     for (int i = 0; i < DBProducts.size(); i++) {
-        if(DBProducts[i].thisItem.getCategory() == "shirt")
         DBProducts[i].printCard();
     }
 
@@ -222,7 +222,7 @@ void Product::makeShirtsVector()
         if(DBProducts[i].thisItem.getCategory() == "shirt")
         shirts.push_back(DBProducts[i]);
     }
-    qDebug() << shirts[0].thisItem.getName();
+    //qDebug() << shirts[0].thisItem.getName();
 
 }
 
@@ -232,7 +232,7 @@ void Product::makeSweatShirtsVector()
         if(DBProducts[i].thisItem.getCategory() == "sweatshirt")
         sweatShirts.push_back(DBProducts[i]);
     }
-    qDebug() << sweatShirts[0].thisItem.getName();
+    //qDebug() << sweatShirts[0].thisItem.getName();
 
 }
 
@@ -242,7 +242,7 @@ void Product::makeCapsVector()
         if(DBProducts[i].thisItem.getCategory() == "cap")
         caps.push_back(DBProducts[i]);
     }
-    qDebug() << caps[0].thisItem.getName();
+    //qDebug() << caps[0].thisItem.getName();
 
 }
 
@@ -252,7 +252,7 @@ void Product::makeCupsVector()
         if(DBProducts[i].thisItem.getCategory() == "cup")
         cups.push_back(DBProducts[i]);
     }
-    qDebug() << cups[0].thisItem.getName();
+    //qDebug() << cups[0].thisItem.getName();
 
 }
 
@@ -262,7 +262,7 @@ void Product::makeStickersVector()
         if(DBProducts[i].thisItem.getCategory() == "sticker")
         stickers.push_back(DBProducts[i]);
     }
-    qDebug() << stickers[0].thisItem.getName();
+    //qDebug() << stickers[0].thisItem.getName();
 
 }
 
@@ -272,7 +272,7 @@ void Product::makeMiscVector()
         if(DBProducts[i].thisItem.getCategory() == "misc")
         misc.push_back(DBProducts[i]);
     }
-    qDebug() << misc[0].thisItem.getName();
+    //qDebug() << misc[0].thisItem.getName();
 
 }
 
@@ -284,4 +284,25 @@ void Product::makeAllVectors()
     makeCupsVector();
     makeStickersVector();
     makeMiscVector();
+}
+
+void Product::updateQuantity()
+{
+    QVector<int> ids;
+    for(int i = 0; i < cart.count(); i++){
+        ids << cart[i].thisAtt.getAttID();
+    }
+
+    QSqlQuery qry;
+    for(int i = 0; i < ids.count(); i++)
+    {
+        QString cmd = QString("UPDATE inventory_attributes SET quantity = quantity - 1 WHERE attributeID = %1;").arg(QString::number(ids[i]));
+        qDebug() << cmd;
+        qry.exec(cmd);
+    }
+
+
+
+
+
 }
