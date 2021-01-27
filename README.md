@@ -17,7 +17,7 @@ Functionalities
 
 5. Press "Checkout" to pay.
 
-![](demos/checkout.png)
+![](demos/checkout.gif)
 
 
 Technologies used
